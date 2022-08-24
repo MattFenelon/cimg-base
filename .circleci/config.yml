@@ -14,14 +14,12 @@ workflows:
           filters:
             branches:
               ignore: /.*/
-          context: cimg-publishing
       - publish-monthly:
           requires:
             - test
           filters:
             branches:
               ignore: /.*/
-          context: cimg-publishing
   main:
     when:
       not: << pipeline.parameters.cron >>
