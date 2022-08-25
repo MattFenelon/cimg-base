@@ -11,9 +11,6 @@ workflows:
     # Publishes the `YYYY.MM` tag as well as the `current` tag
     jobs:
       - test:
-          filters:
-            branches:
-              ignore: /.*/
       - publish-monthly:
           requires:
             - test
